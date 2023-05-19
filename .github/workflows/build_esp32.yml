@@ -23,10 +23,12 @@ jobs:
       - name: Build firmware for ESP32
         run: |
           cd ESP32_AP-Flasher
+          cd ESP32_AP-Flasher
           pio run --environment Simple_AP
         
       - name: Build filesystem for ESP32
         run: |
+          cd ESP32_AP-Flasher
           pio run --target buildfs --environment Simple_AP
           
       - name: Build firmware for ESP32-S2
@@ -35,12 +37,15 @@ jobs:
         
       - name: Build filesystem for ESP32-S2
         run: |
+          cd ESP32_AP-Flasher
           pio run --target buildfs --environment OpenEPaperLink_Mini_AP
           
       - name: Build firmware for ESP32-S3
         run: |
+          cd ESP32_AP-Flasher
           pio run --environment OpenEPaperLink_AP_and_Flasher
         
       - name: Build filesystem for ESP32-S3
         run: |
+          cd ESP32_AP-Flasher
           pio run --target buildfs --environment OpenEPaperLink_AP_and_Flasher
