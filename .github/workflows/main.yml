@@ -22,6 +22,5 @@ jobs:
 
       - name: Build PlatformIO Project
         run: |
-          ls -la
-          cd OpenEPaperLink
+          cd ESP32_AP-Flasher
           pio run
