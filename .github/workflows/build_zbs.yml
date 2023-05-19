@@ -1,0 +1,24 @@
+name: ZBS243 build
+
+on: [push,pull_request]
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest,windows-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          sudo apt install -y php=2:7.4+75 sdcc=3.8.0+dfsg-3build1
+
+      - name: Build Tag firmware
+        run: |
+          cd zbs243_Tag_FW
+          sh buildfw.sh
+      
+      - name: Build AP firmware
+        run: |
+          cd zbs243_AP_FW
+          sh buildfw.sh
