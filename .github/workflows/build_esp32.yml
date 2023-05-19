@@ -32,6 +32,7 @@ jobs:
           
       - name: Build firmware for ESP32-S2
         run: |
+          cd ESP32_AP-Flasher
           pio run --environment OpenEPaperLink_Mini_AP
         
       - name: Build filesystem for ESP32-S2
