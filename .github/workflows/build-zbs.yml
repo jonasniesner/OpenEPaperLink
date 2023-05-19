@@ -4,14 +4,14 @@ on: [push,pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v3
 
       - name: Install Dependencies
         run: |
-          sudo apt install -y php=2:7.4+75 sdcc=3.8.0+dfsg-3build1
+          sudo apt install -y php sdcc
 
       - name: Build Tag firmware
         run: |
