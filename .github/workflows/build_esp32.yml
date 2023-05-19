@@ -1,4 +1,4 @@
-name: PlatformIO CI
+name: ESP32 build
 
 on: [push,pull_request]
 
@@ -27,7 +27,7 @@ jobs:
         
       - name: Build filesystem for ESP32
         run: |
-          pio run -target buildfs --environment Simple_AP
+          pio run --target buildfs --environment Simple_AP
           
       - name: Build firmware for ESP32-S2
         run: |
@@ -35,7 +35,7 @@ jobs:
         
       - name: Build filesystem for ESP32-S2
         run: |
-          pio run -target buildfs --environment OpenEPaperLink_Mini_AP
+          pio run --target buildfs --environment OpenEPaperLink_Mini_AP
           
       - name: Build firmware for ESP32-S3
         run: |
@@ -43,4 +43,4 @@ jobs:
         
       - name: Build filesystem for ESP32-S3
         run: |
-          pio run -target buildfs --environment OpenEPaperLink_AP_and_Flasher
+          pio run --target buildfs --environment OpenEPaperLink_AP_and_Flasher
