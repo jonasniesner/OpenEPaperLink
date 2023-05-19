@@ -22,5 +22,6 @@ jobs:
 
       - name: Build PlatformIO Project
         run: |
+          ls -la
           cd OpenEPaperLink
           pio run
