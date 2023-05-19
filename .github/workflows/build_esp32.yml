@@ -23,7 +23,6 @@ jobs:
       - name: Build firmware for ESP32
         run: |
           cd ESP32_AP-Flasher
-          cd ESP32_AP-Flasher
           pio run --environment Simple_AP
         
       - name: Build filesystem for ESP32
