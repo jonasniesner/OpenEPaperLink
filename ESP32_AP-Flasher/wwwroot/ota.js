@@ -604,6 +604,7 @@ async function fetchAndCheckTagtypes(cleanup) {
                 if (!isInUse) {
                     isInUse = Array.from(gridItems).some(element => element.dataset.usetemplate == hwtype);
                 }
+                /*
                 if (!isInUse) {
                     print("not in use, deleting", "yellow");
                     const formData = new FormData();
@@ -614,6 +615,7 @@ async function fetchAndCheckTagtypes(cleanup) {
                     })
                     check = false;
                 }
+                */
             }
             
             if (check) {
